@@ -1,0 +1,27 @@
+<!--Меню-->
+<ul class="menu drilldown vertical" data-responsive-menu="drilldown large-dropdown" data-auto-height="true" data-parent-link="true" data-close-on-click="true">
+  {{#each menu}}
+  <li>
+    <a href="{{this.link}}">{{this.item}}</a>
+    {{#if this.submenu}}
+    <ul class="menu vertical nested">
+      {{#each this.submenu}}
+      <li>
+        <a href="{{this.link}}">{{this.item}}</a>
+        {{#if this.submenu}}
+        <ul class="menu vertical nested">
+          {{#each this.submenu}}
+          <li>
+            <a href="{{this.link}}">{{this.item}}</a>
+          </li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>
+<!--//Меню-->

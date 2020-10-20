@@ -1,0 +1,41 @@
+<header class="header" id="site-header">
+  <div class="grid-container wide">
+    <div class="grid-x align-middle align-justify">
+      <div class="cell shrink large-4 xlarge-3 small-order-2 large-order-1">
+        <button type="button" class="button burger margin-0" data-toggle="off-canvas">
+          <span class="button__body">Меню</span>
+          <span class="button__append"><i class="burger__icon las la-bars"></i></span>
+        </button>
+      </div>
+      <div class="cell auto large-4 xlarge-6 small-order-1 large-order-2">
+        <a href="/" class="site__logo text-hide">
+          <img src="{{root}}assets/img/logo.svg" alt="Российский государственный социальный университет">
+          {{!--<svg viewbox="0 0 135 41"><use xlink:href="#logo-rgsu"></use></svg>--}}
+          Российский государственный социальный университет
+        </a>
+      </div>
+      <div class="cell shrink xlarge-3 large-order-3 show-for-large">
+        <div class="button-group align-right margin-bottom-0">
+          <button class="button margin-bottom-0" type="button" data-toggle="lk-dropdown">
+            <span class="button__body">Личный кабинет</span>
+            <span class="button__append toggle-rotate"><i class="las la-angle-down la-lg"></i></span>
+          </button>
+          <div class="dropdown-pane padding-0 border-none" id="lk-dropdown" data-dropdown data-hover="true" data-position="bottom" data-alignment="right">
+            <div class="button-group stacked no-gaps margin-0">
+              <a href="#" class="button margin-0">Система дистанционного обучения</a>
+              <a href="#" class="button margin-0">Личный кабинет поступающего</a>
+              <a href="#" class="button margin-0">Личный кабинет сотрудника</a>
+            </div>
+          </div>
+          <button class="button hollow margin-bottom-0" type="button" data-toggle="search-dropdown">
+            <span class="button__body">Найти</span>
+            <span class="button__append"><i class="las la-search la-lg"></i></span>
+          </button>
+          <div class="dropdown-pane padding-0 border-none" id="search-dropdown" data-dropdown data-v-offset="10" data-position="bottom" data-alignment="right" data-auto-focus="true">
+            {{> form-searchbox}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

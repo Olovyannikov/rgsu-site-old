@@ -1,0 +1,60 @@
+- title: 'Документационное обеспечение управления и архивоведение'
+  code: 46.02.01
+  level: Колледж
+  class: college
+- title: 'Дизайн'
+  code: 54.03.01
+  level: Бакалавриат
+  class: bachelor
+- title: 'Документоведение и архивоведение'
+  code: 46.03.02
+  level: Специалитет
+  class: specialist
+- title: 'Безопасность информационных технологий в правоохранительной сфере'
+  code: 10.05.05
+  level: Магистратура
+  class: magister
+- title: 'Журналистика'
+  code: 42.04.02
+  level: Аспирантура
+  class: postgraduate
+- title: 'Фармация'
+  code: 33.05.01
+  level: Бакалавриат
+  class: bachelor
+- title: 'Перевод и переводоведение'
+  code: 45.05.01
+  level: Магистратура
+  class: magister
+- title: 'Специальное (дефектологическое) образование'
+  code: 44.03.03
+  level: Колледж
+  class: college
+- title: 'Организация работы с молодежью'
+  code: 39.04.03
+  level: Аспирантура
+  class: postgraduate
+- title: 'Социологические науки'
+  code: 39.06.01
+  level: Аспирантура
+  class: postgraduate
+- title: 'Государственное и муниципальное управление'
+  code: 38.03.04
+  level: Бакалавриат
+  class: bachelor
+- title: 'Физическая культура для лиц с отклонениями в состоянии здоровья (АФК)'
+  code: 49.03.02
+  level: Бакалавриат
+  class: bachelor
+- title: 'Техносферная безопасность '
+  code: 20.03.01
+  level: Аспирантура
+  class: postgraduate
+- title: 'Бизнес-информатика'
+  code: 38.03.05
+  level: Колледж
+  class: college
+- title: 'Юриспруденция'
+  code: 40.03.01
+  level: Специалитет
+  class: specialist

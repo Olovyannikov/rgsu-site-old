@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+// Default Variables
+
+// Slick icon entity codes outputs the following
+// "\2190" outputs ascii character "←"
+// "\2192" outputs ascii character "→"
+// "\2022" outputs ascii character "•"
+
+$slick-font-path: "../fonts/" !default;
+$slick-font-family: $body-font-family; //"slick" !default;
+$slick-loader-path: "../img/" !default;
+$slick-arrow-color: $medium-gray !default;
+$slick-dot-color: $light-gray !default;
+$slick-dot-color-active: $primary-color !default; //$slick-dot-color !default;
+$slick-prev-character: "\2190" !default;
+$slick-next-character: "\2192" !default;
+$slick-dot-character: "○" !default; // ○
+$slick-dot-active-character: "●" !default; // ●
+$slick-dot-size: 16px !default;
+$slick-opacity-default: 1 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 1 !default;
+
+@function slick-image-url($url) {
+	@if function-exists(image-url) {
+		@return image-url($url);
+	}
+	@else {
+		@return url($slick-loader-path + $url);
+	}
+}
+
+@function slick-font-url($url) {
+	@if function-exists(font-url) {
+		@return font-url($url);
+	}
+	@else {
+		@return url($slick-font-path + $url);
+	}
+}
+
+/* Slider */
+
+//.slick-list {
+//	.slick-loading & {
+//		background: #fff slick-image-url("../img/ajax-loader.gif") center center no-repeat;
+//	}
+//}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+	display: block;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	//line-height: 0px;
+	//font-size: 0px;
+	color: $white;
+	cursor: pointer;
+	top: 50%;
+	transform: translate(0, -50%);
+	padding: 0;
+	border: none;
+	outline: none;
+	//border-radius: 4px;
+	opacity: 0.5;
+	z-index: 1;
+	//background: yellow; //$warning-color;
+	transition: opacity 0.25s ease-in-out;
+	&:hover, &:focus {
+		outline: none;
+		opacity: 1;
+	}
+}
+
+.slick-prev {
+	left: 20px;
+}
+.slick-next {
+	right: 20px;
+}
+
+/* Dots */
+
+.slick-dotted.slick-slider {
+	//margin-bottom: 40px;
+}
+
+.slick-dots {
+	display: flex;
+	position: absolute;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	left: 50%;
+	bottom: 32px;
+	list-style: none;
+	text-align: center;
+	transform: translateX(-50%);
+	//width: 100%;
+	li {
+		position: relative;
+		display: inline-flex;
+		margin: 5px;
+		padding: 0;
+		cursor: pointer;
+		button {
+			display: block;
+			cursor: pointer;
+			height: $slick-dot-size;
+			width: $slick-dot-size;
+			color: transparent;
+			//font-size: 0px;
+			//line-height: 0px;
+			outline: none;
+			//border: 1px solid $slick-dot-color;
+			background: $slick-dot-color;
+			border-radius: $slick-dot-size/2;
+			//transition: width 0.25s;
+			&:hover {
+				background: $slick-dot-color-active;
+			}
+		}
+		&.slick-active button {
+			//border-color: $slick-dot-color-active;
+			background: $slick-dot-color-active;
+		}
+	}
+}
